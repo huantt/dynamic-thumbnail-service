@@ -1,0 +1,13 @@
+doctype html
+html
+  block head
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    div
+      block header
+        div(class='header')
+          span(class="app-name") #{process.env.APP_NAME}
+          img(class="logo" src="/images/logo.png")
+      block content
+      block footer
+        div(class='footer')

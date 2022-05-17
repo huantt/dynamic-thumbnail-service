@@ -1,0 +1,10 @@
+extends layout
+append head
+    link(rel='stylesheet', href='/css/user.css')
+block content
+    div(class="container")
+        div(class="left-side")
+            div(class="name") #{name}
+            div(class="bio") #{bio}
+        div(class="right-side")
+            img(src=`${avatar}` class="avatar")

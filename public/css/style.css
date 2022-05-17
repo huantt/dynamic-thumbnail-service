@@ -1,0 +1,29 @@
+body {
+    padding: 50px;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.header {
+    height: 30px;
+    display: flex;
+    justify-content: right;
+    margin-bottom: 20px;
+}
+
+.header .app-name{
+    margin-right: 10px;
+}
+
+.header .logo {
+    height: 30px;
+}
+
+.footer {
+    height: 30px;
+    width: 100%;
+    background: #33a745;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
