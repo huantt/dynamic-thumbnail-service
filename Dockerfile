@@ -1,4 +1,4 @@
-FROM node:14-slim
+FROM node:18.1.0-slim
 WORKDIR /usr/src/app
 
 RUN apt-get update \
@@ -25,7 +25,7 @@ RUN npm init -y &&  \
 
 COPY .env.sample .env
 ENV PORT=3000
-ENV PUPPETEER_EXECUTABLE_PATH=google-chrome-stable
+ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome-stable
 
 USER pptruser
 CMD ["npm","start"]

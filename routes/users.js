@@ -9,9 +9,9 @@ router.get('/html/:userId', function (req, res, next) {
     res.render('user-thumbnail', userInfo);
 });
 
-router.get('/thumbnail/:userId.png',  function (req, res, next) {
+router.get('/thumbnail/:userId.png', function (req, res, next) {
     let {userId} = req.params
-    let htmlEndpoint = `${req.protocol}://${req.hostname}:${process.env.PORT||3000}/users/html/${userId}`
+    let htmlEndpoint = `http://localhost:${process.env.PORT || 3000}/users/html/${userId}`
     console.log(htmlEndpoint)
     screenshot(htmlEndpoint, 1200, 630).then((file) => {
         res.statusCode = 200;
@@ -24,7 +24,7 @@ router.get('/thumbnail/:userId.png',  function (req, res, next) {
     });
 });
 
-router.get('/:userId',  function (req, res, next) {
+router.get('/:userId', function (req, res, next) {
     let {userId} = req.params
     let userInfo = getUserInfo(userId);
     res.render('user', userInfo);
